@@ -493,11 +493,12 @@ form.onsubmit = async (event) => {
 
   } catch (error) {
 
-    thinking.textContent =
-      "❌ Verbindung zur Cloud fehlgeschlagen.";
+  console.error("PocketAI Fehler:", error);
 
-  }
+  thinking.textContent =
+    "❌ Fehler: " + (error.message || error);
 
+}
 };
 
 </script>
